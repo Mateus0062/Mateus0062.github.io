@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Quer casar comigo ? </title>
+</head>
+<body>
+	<div id = "conteudo">
+		<h1>Aceita casar comigo?</h1>
+		<button class="btn" onclick="sim()">NÃO</button>
+		<button class="btn" onmouseover="desvia(this)">SIM</button>
+	</div>
+</body>
+<style>
+	#conteudo {
+		background-color: rgb(255, 117, 117);
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: 0;
+		left: 0;
+		padding: 10px;
+		text-align: center;
+	}
+	.btn {
+		background-color: black;
+		color: white;
+		border: 2px solid gray;
+		padding: 10px;
+		width: 100px;
+	}
+</style>
+<script>
+	function sim() {
+		alert("GRAÇAS A DEUS!!!")
+	}
+	function desvia(t) {
+		var btn = t;
+		console.log("Opa, desviei")
+		btn.style.position = "absolute";
+		btn.style.bottom = randomnumber(10,90);
+		btn.style.left = randomnumber(10,90);
+	}
+	function randomnumber(min, max) {
+		return Math.random() * (max - min) + min + "%";
+	}
+	
+</script>
+</html>
